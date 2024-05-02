@@ -31,7 +31,7 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [isCollapsed, setCollapsed] = useState(false);
+  
   return (
     <div className="w-full h-full sidebar-scroll flex md:flex-row flex-col">
       <AppSidebar/>

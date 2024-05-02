@@ -27,12 +27,12 @@ function AppSidebar({}: Props) {
     <aside
       className={`flex-col relative  border-r hidden md:flex ${
         isCollapsed
-          ? "w-[5rem] justify-center items-center px-[0.6rem]"
+          ? "w-[4rem] justify-center items-center px-[0.6rem]"
           : "w-[16rem] px-[1.3rem]"
       }   transition-all   duration-150 h-full py-[3rem]  gap-3`}
     >
       <div
-        className="absolute -right-3.5 top-24 p-1 rounded-full border bg-white cursor-pointer hover:bg-secondary"
+        className="absolute -right-3.5 top-20 p-1 rounded-full border bg-white cursor-pointer hover:bg-secondary"
         onClick={() => {
           setCollapsed((prev) => !prev);
         }}
