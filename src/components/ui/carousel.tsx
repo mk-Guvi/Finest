@@ -202,7 +202,7 @@ const CarouselPrevious = React.forwardRef<
 
   return canScrollPrev ? (
     <>
-    <div className="absolute top-0 rounded-l-2xl left-0 h-full w-12 bg-gradient-to-t from-transparent to-white" />
+    <div className="absolute top-0 hidden md:block rounded-l-2xl left-0 h-full w-12 bg-gradient-to-t from-transparent to-white" />
     <Button
       ref={ref}
       variant={variant}
@@ -234,7 +234,7 @@ const CarouselNext = React.forwardRef<
 
   return canScrollNext ? (
     <>
-      <div className="absolute top-0 rounded-r-2xl right-0 h-full w-12 bg-gradient-to-t from-transparent to-white" />
+      <div className="absolute hidden md:block top-0 rounded-r-2xl right-0 h-full w-12 bg-gradient-to-t from-transparent to-white" />
       <Button
         ref={ref}
         variant={variant}
