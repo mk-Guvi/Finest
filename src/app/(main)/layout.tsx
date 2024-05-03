@@ -37,7 +37,7 @@ export default function Layout({
       <AppSidebar/>
       <AppHeader/>
       
-      <div className="overflow-y-auto overflow-x-hidden flex-1 h-full py-[3rem] px-[1.3rem]">
+      <div className="overflow-y-auto overflow-x-hidden flex-1 h-full py-[1rem] md:py-[3rem] md:px-[1.3rem]">
         {" "}
         {children}
       </div>
