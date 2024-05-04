@@ -26,8 +26,8 @@ function GoalSectionDesktopView({}: Props) {
   }, []);
   return (
     <div className="w-full border-y md:border md:p-3 bg-white md:rounded-2xl relative  drop-shadow-md">
-      <header className="md:border-b px-3 md:px-0  pb-3 pt-2 gap-3.5 flex flex-wrap items-center">
-        <p className="text-sm font-semibold flex-1 min-w-24">
+      <header className="md:border-b px-3 md:px-0  py-3 gap-3.5 flex flex-wrap items-center">
+        <p className="text-sm font-semibold flex-1 min-w-36">
           {goalSectionTitle}
         </p>
         <div className="hidden md:flex items-center gap-1 text-xs text-selected-text">
@@ -44,7 +44,7 @@ function GoalSectionDesktopView({}: Props) {
           size={34}
         />
       </header>
-      <div className="flex md:hidden items-center justify-center gap-1 bg-selected-background border-y py-3 text-gray-600 text-xs font-medium">
+      <div className="flex md:hidden items-center justify-center gap-1 bg-background border-y py-3 text-gray-600 text-xs font-medium">
         <AlertCircle size={15}/> <p>Tap on a card to view more information</p>
       </div>
       <section className="p-3 flex  gap-5 flex-wrap">

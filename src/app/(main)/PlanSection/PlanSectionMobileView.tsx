@@ -28,7 +28,7 @@ export function PlanSectionMobileView() {
             {carouselItems?.map((eachItem, i) => {
               return (
                 <CarouselItem
-                  className="basis-1/3 sm:basis-1/4 md:basis-1/4 lg:basis-1/6 flex  justify-center items-center "
+                  className="basis-1/2.5 sm:basis-1/4 md:basis-1/4 lg:basis-1/6 flex  justify-center items-center "
                   key={i}
                 >
                   <a
