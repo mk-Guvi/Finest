@@ -1,6 +1,6 @@
-import Image from "next/image";
 
-import GroupedSlider from "@/components/ui/grouped-slider";
+"use client"
+import Image from "next/image";
 import PlanSection from "./PlanSection";
 
 

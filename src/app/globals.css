@@ -21,7 +21,7 @@ body {
     --popover-foreground: 224 71.4% 4.1%;
     --primary: 224 80% 95% / 1;
     --primary-foreground: 210 20% 98%;
-    --secondary: 220 14.3% 95.9%;
+    --secondary: #C5DEBD;
     --secondary-foreground: 220.9 39.3% 11%;
     --muted: 220 14.3% 95.9%;
     --muted-foreground: 220 8.9% 46.1%;
@@ -33,6 +33,14 @@ body {
     --input: 220 13% 91%;
     --ring: 262.1 83.3% 57.8%;
     --radius: 0.5rem;
+    --selected-green:#5B8350;
+    --warning-primary:#D99E16;
+    --warning-secondary:#F7DA95;
+    --error-primary:#E85D5D;
+    --error-secondary:#FFB9B9;
+    --twilight-blue:#3B4D80;
+    --twilight-blue-secondary:#A8B1CB;
+    --fabits-primary-300:#808DB3;
   }
 
   .dark {
@@ -44,7 +52,7 @@ body {
     --popover-foreground: 210 20% 98%;
     --primary: 266, 100%, 50%;
     --primary-foreground: 210 20% 98%;
-    --secondary: 215 27.9% 16.9%;
+    --secondary: #C5DEBD;
     --secondary-foreground: 210 20% 98%;
     --muted: 215 27.9% 16.9%;
     --muted-foreground: 217.9 10.6% 30.9%;
@@ -55,6 +63,14 @@ body {
     --border: 247, 18.3%, 18.2%;
     --input: 215 27.9% 16.9%;
     --ring: 263.4 70% 50.4%;
+    --selected-green:#5B8350;
+    --warning-primary:#D99E16;
+    --warning-secondary:#F7DA95;
+    --error-primary:#E85D5D;
+    --error-secondary:#FFB9B9;
+    --twilight-blue:#3B4D80;
+    --twilight-blue-secondary:#A8B1CB;
+    --fabits-primary-300:#808DB3;
   }
 }
 
@@ -85,4 +101,187 @@ body {
 .sidebar-scroll::-webkit-scrollbar-track-piece {
   width: 0; /* Hide the scrollbar track piece */
   background-color: transparent;
+}
+
+
+
+
+.linear-gradient-green {
+  background-image: linear-gradient(
+    145deg,
+    var(--selected-green) 5%, /* Use --selected-green variable */
+    transparent 5%,
+    transparent 10%,
+    var(--selected-green) 10%,
+    var(--selected-green) 15%,
+    transparent 15%,
+    transparent 20%,
+    var(--selected-green) 20%,
+    var(--selected-green) 25%,
+    transparent 25%,
+    transparent 30%,
+    var(--selected-green) 30%,
+    var(--selected-green) 35%,
+    transparent 35%,
+    transparent 40%,
+    var(--selected-green) 40%,
+    var(--selected-green) 45%,
+    transparent 45%,
+    transparent 50%,
+    var(--selected-green) 50%, /* Repeat the gradient for each 50% */
+    var(--selected-green) 55%,
+    transparent 55%,
+    transparent 60%,
+    var(--selected-green) 60%,
+    var(--selected-green) 65%,
+    transparent 65%,
+    transparent 70%,
+    var(--selected-green) 70%,
+    var(--selected-green) 75%,
+    transparent 75%,
+    transparent 80%,
+    var(--selected-green) 80%,
+    var(--selected-green) 85%,
+    transparent 85%,
+    transparent 90%,
+    var(--selected-green) 90%,
+    var(--selected-green) 95%,
+    transparent 95%,
+    transparent 100%
+  );
+}
+
+.linear-gradient-warning {
+  background-image: linear-gradient(
+    145deg,
+    var(--warning-primary) 5%, /* Use --selected-green variable */
+    transparent 5%,
+    transparent 10%,
+    var(--warning-primary) 10%,
+    var(--warning-primary) 15%,
+    transparent 15%,
+    transparent 20%,
+    var(--warning-primary) 20%,
+    var(--warning-primary) 25%,
+    transparent 25%,
+    transparent 30%,
+    var(--warning-primary) 30%,
+    var(--warning-primary) 35%,
+    transparent 35%,
+    transparent 40%,
+    var(--warning-primary) 40%,
+    var(--warning-primary) 45%,
+    transparent 45%,
+    transparent 50%,
+    var(--warning-primary) 50%, /* Repeat the gradient for each 50% */
+    var(--warning-primary) 55%,
+    transparent 55%,
+    transparent 60%,
+    var(--warning-primary) 60%,
+    var(--warning-primary) 65%,
+    transparent 65%,
+    transparent 70%,
+    var(--warning-primary) 70%,
+    var(--warning-primary) 75%,
+    transparent 75%,
+    transparent 80%,
+    var(--warning-primary) 80%,
+    var(--warning-primary) 85%,
+    transparent 85%,
+    transparent 90%,
+    var(--warning-primary) 90%,
+    var(--warning-primary) 95%,
+    transparent 95%,
+    transparent 100%
+  );
+}
+
+.linear-gradient-error {
+  background-image: linear-gradient(
+    145deg,
+    var(--error-primary) 5%, /* Use --selected-green variable */
+    transparent 5%,
+    transparent 10%,
+    var(--error-primary) 10%,
+    var(--error-primary) 15%,
+    transparent 15%,
+    transparent 20%,
+    var(--error-primary) 20%,
+    var(--error-primary) 25%,
+    transparent 25%,
+    transparent 30%,
+    var(--error-primary) 30%,
+    var(--error-primary) 35%,
+    transparent 35%,
+    transparent 40%,
+    var(--error-primary) 40%,
+    var(--error-primary) 45%,
+    transparent 45%,
+    transparent 50%,
+    var(--error-primary) 50%, /* Repeat the gradient for each 50% */
+    var(--error-primary) 55%,
+    transparent 55%,
+    transparent 60%,
+    var(--error-primary) 60%,
+    var(--error-primary) 65%,
+    transparent 65%,
+    transparent 70%,
+    var(--error-primary) 70%,
+    var(--error-primary) 75%,
+    transparent 75%,
+    transparent 80%,
+    var(--error-primary) 80%,
+    var(--error-primary) 85%,
+    transparent 85%,
+    transparent 90%,
+    var(--error-primary) 90%,
+    var(--error-primary) 95%,
+    transparent 95%,
+    transparent 100%
+  );
+}
+
+.linear-gradient-twilight {
+  background-image: linear-gradient(
+    145deg,
+    var(--twilight-blue) 5%, /* Use --selected-green variable */
+    transparent 5%,
+    transparent 10%,
+    var(--twilight-blue) 10%,
+    var(--twilight-blue) 15%,
+    transparent 15%,
+    transparent 20%,
+    var(--twilight-blue) 20%,
+    var(--twilight-blue) 25%,
+    transparent 25%,
+    transparent 30%,
+    var(--twilight-blue) 30%,
+    var(--twilight-blue) 35%,
+    transparent 35%,
+    transparent 40%,
+    var(--twilight-blue) 40%,
+    var(--twilight-blue) 45%,
+    transparent 45%,
+    transparent 50%,
+    var(--twilight-blue) 50%, /* Repeat the gradient for each 50% */
+    var(--twilight-blue) 55%,
+    transparent 55%,
+    transparent 60%,
+    var(--twilight-blue) 60%,
+    var(--twilight-blue) 65%,
+    transparent 65%,
+    transparent 70%,
+    var(--twilight-blue) 70%,
+    var(--twilight-blue) 75%,
+    transparent 75%,
+    transparent 80%,
+    var(--twilight-blue) 80%,
+    var(--twilight-blue) 85%,
+    transparent 85%,
+    transparent 90%,
+    var(--twilight-blue) 90%,
+    var(--twilight-blue) 95%,
+    transparent 95%,
+    transparent 100%
+  );
 }

@@ -7,6 +7,10 @@ import {
   University,
 } from "lucide-react";
 
+export const goalSectionTitle="Track current goals"
+export const goalSectionSortOptions=[{label:"Progress (High to Low)",value:"HTL"},{label:"Progress (Low to High)",value:"LTH"}]
+export const goalSectionFiltersLabel="Filters"
+export const goalSectionSortLabel="Sort by:"
 export const carouselTitle = `What financial goal do you want to plan today?`;
 export const carouselSubTitle = `Select a goal to start planning`;
 export const carouselItems = [

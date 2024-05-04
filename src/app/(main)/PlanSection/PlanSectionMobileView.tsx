@@ -14,7 +14,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function PlanSectionMobileView() {
   return (
-    <div className=" md:hidden flex flex-col gap-2">
+    <div className=" md:hidden flex flex-col gap-4">
       <div className="flex items-center gap-1">
         <ChevronLeft className="text-gray-600" size={16} />
         <p className="text-xs font-semibold">Plan a Goal</p>

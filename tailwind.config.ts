@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -15,23 +15,35 @@ const config = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        'xs': '400px'
       },
     },
     extend: {
+      boxShadow: {
+        blue: '0px 4px 0px rgba(36, 47, 78, 0.12)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
-        "selected-background":"hsl(var(--selected-background))",
-        "selected-text":"hsl(var(--selected-text))",
+        "selected-background": "hsl(var(--selected-background))",
+        "selected-text": "hsl(var(--selected-text))",
+        "selected-green": "var(--selected-green)",
+        "warning-primary": "var(--warning-primary)",
+        "warning-secondary": "var(--warning-secondary)",
+        "error-primary": "var(--error-primary)",
+        "error-secondary": "var(--error-secondary)",
+        "twilight-blue": "var(--twilight-blue)",
+        "twilight-blue-secondary": "var(--twilight-blue-secondary)",
         foreground: "hsl(var(--foreground))",
+        "fabits-primary-300":"var(--fabits-primary-300)",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "var(--secondary)",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
@@ -77,6 +89,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
