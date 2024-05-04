@@ -10,10 +10,11 @@ import {
 } from "@/components/ui/select";
 import { goalSectionSortOptions } from "./constants";
 
-export function GoalSectionSortSelect() {
+export function GoalSectionSortSelect({onChange}:{onChange:()=>void}) {
   const [selectedValue, setSelectedValue] = useState(goalSectionSortOptions[0]);
 
   const handleSelectChange = (value: string) => {
+    onChange()
     setSelectedValue(goalSectionSortOptions.find((e) => e.value == value)!);
   };
 
