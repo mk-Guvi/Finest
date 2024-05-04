@@ -140,7 +140,7 @@ function GoalSectionDesktopView({}: Props) {
           </>
         )}
       </section>
-      <div className="flex items-center text-sm gap-3 justify-end">
+      <div className="flex items-center text-sm gap-3 p-3 md:p-0 justify-end">
         <p className="text-gray-500">
           showing{" "}
           <span className="text-gray-800">{pagination.currentPage}</span> of{" "}
