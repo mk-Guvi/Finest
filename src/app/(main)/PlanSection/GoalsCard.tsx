@@ -115,7 +115,7 @@ function GoalsCard(props: GoalsCardPropsT) {
     <a
       href={linkedIn}
       target="_blank"
-      className="border rounded-3xl transition-all duration-300 hover:shadow-[0_4px_10px_rgba(36,47,78,0.12)] p-4 w-72"
+      className="border rounded-3xl transition-all duration-300 hover:shadow-[0_4px_10px_rgba(36,47,78,0.12)] p-4 w-full sm:w-72"
     >
       <div className="flex items-start gap-4 border-b py-2 pb-4">
         <Avatar className="!rounded-lg">
