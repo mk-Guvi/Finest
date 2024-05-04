@@ -38,11 +38,13 @@ function GoalSectionDesktopView({}: Props) {
           <p className="font-medium text-gray-600">{goalSectionSortLabel}</p>
           <GoalSectionSortSelect />
         </div>
+        <div className="flex items-center gap-3">
         <GoalSectionSearchInput />
         <ListFilter
           className="md:hidden block rounded-full border p-2 shadow text-fabits-primary-300"
           size={34}
         />
+        </div>
       </header>
       <div className="flex md:hidden items-center justify-center gap-1 bg-background border-y py-3 text-gray-600 text-xs font-medium">
         <AlertCircle size={15}/> <p>Tap on a card to view more information</p>
