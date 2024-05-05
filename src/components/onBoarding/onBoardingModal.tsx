@@ -35,8 +35,8 @@ const OnboardModal = () => {
   return (
     <Drawer open={isOpen} onClose={handleClose}>
       <DrawerContent
-        className={`${
-          steps === 2 ? "h-[85dvh]" : steps === 4 ? "h-[90dvh]" : "h-[75dvh]"
+        className={` ${
+          steps === 2 ? "h-[85dvh]" : steps === 4 ? "h-[90dvh]" : "h-[80dvh]"
         } sm:hidden flex flex-col   linear-gradient-onboarding `}
       >
         <X
