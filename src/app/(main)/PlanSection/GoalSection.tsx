@@ -41,7 +41,7 @@ function GoalSectionDesktopView({}: Props) {
   }, [changeWatcher]);
 
   const handlePagination = (type: "NEXT" | "PREVIOUS") => {
-    setLoading(true)
+    setLoading(true);
     setPagination((prev) => {
       return {
         ...prev,
@@ -62,16 +62,20 @@ function GoalSectionDesktopView({}: Props) {
         </div>
         <div className="hidden md:flex items-center gap-1.5 text-xs text-selected-text">
           <p className="font-medium text-gray-600">{goalSectionSortLabel}</p>
-          <GoalSectionSortSelect onChange={()=>{
-            setLoading(true)
-            recordChanges()
-          }}/>
+          <GoalSectionSortSelect
+            onChange={() => {
+              setLoading(true);
+              recordChanges();
+            }}
+          />
         </div>
         <div className="flex items-center gap-3">
-          <GoalSectionSearchInput onChange={()=>{
-            setLoading(true)
-            recordChanges()
-          }}/>
+          <GoalSectionSearchInput
+            onChange={() => {
+              setLoading(true);
+              recordChanges();
+            }}
+          />
           <ListFilter
             className="md:hidden block rounded-full border p-2 shadow text-fabits-primary-300"
             size={34}
@@ -83,13 +87,11 @@ function GoalSectionDesktopView({}: Props) {
       </div>
       <section className="p-3 flex  gap-5 flex-wrap">
         {loading ? (
-          <>
-            <Skeleton className=" w-72 h-96 rounded-3xl" />
-            <Skeleton className=" w-72 h-96 rounded-3xl" />
-            <Skeleton className=" w-72 h-96 rounded-3xl" />
-            <Skeleton className=" w-72 h-96 rounded-3xl" />
-            <Skeleton className=" w-72 h-96 rounded-3xl" />
-          </>
+          [1, 2, 3, 4, 5].map((e) => {
+            return (
+              <Skeleton className="w-full sm:w-72 h-96 rounded-3xl" key={e} />
+            );
+          })
         ) : (
           <>
             <GoalsCard
