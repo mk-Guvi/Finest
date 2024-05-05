@@ -1,6 +1,7 @@
 "use client";
 import AppHeader from "@/components/layout/AppHeader";
 import AppSidebar from "@/components/layout/Sidebar";
+import OnBoarding from "@/components/onBoarding";
 
 
 
@@ -14,6 +15,7 @@ export default function Layout({
     <div className="w-full h-full sidebar-scroll flex md:flex-row flex-col">
       <AppSidebar/>
       <AppHeader/>
+      <OnBoarding/>
       
       <div className="overflow-y-auto overflow-x-hidden flex-1 h-full py-[1rem] md:py-[3rem] md:px-[1.3rem]">
         {" "}

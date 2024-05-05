@@ -14,9 +14,14 @@ const buttonVariants = cva(
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "outline-green":
+          "border border-transparent  !py-8 !px-6 rounded-xl hover:shadow-md",
+          "outline-green-selected":
+          "border border-[#83A720]   !py-8 !px-6 rounded-xl hover:shadow-md",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
+        "ghost-green": "bg-[#83A720] rounded-xl text-white shadow-md",
         link: "text-selected-text border-selected-text underline-offset-4 hover:underline",
         "link-button":
           "hover:text-selected-text hover:border-selected-text  border-transparent border-[1px] underline-offset-4 hover:bg-primary",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import ModalProvider from "@/components/onBoarding/modal-provider";
 
 
 
@@ -20,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={DMSans.className}>
+        <ModalProvider>
         {children}
+        </ModalProvider>
       </body>
     </html>
   );
