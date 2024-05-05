@@ -296,3 +296,22 @@ body {
 .linear-gradient-onboarding {
   background: linear-gradient(180deg, #e6e66a 53.32%, #ffffdb 70.74%);
 }
+
+@keyframes carAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  75% {
+    transform: translateX(150%);
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  100% {
+    transform: translateX(700%); /* Moves the car out */
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+}
+
+.slide-animation-loading {
+  animation: carAnimation 8s ease-in-out infinite;
+}
