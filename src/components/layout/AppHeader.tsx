@@ -12,7 +12,7 @@ function AppHeader({}: Props) {
   const {setOpen}=useModal()
   return (
     <header className="flex md:hidden items-center border-b  gap-4 p-[1rem] ">
-      <Menu onClick={()=>setOpen(<OnboardModal/>)}/>
+      <Menu onClick={setOpen}/>
       <div className="flex-1">
         <Image
           src={finestLogo.src}

@@ -32,18 +32,20 @@ const OnboardModal = () => {
       setSteps(4);
     }
   }, [changes]);
+  useEffect(() => {
+    setSteps(1);
+  }, [isOpen]);
   return (
     <Drawer open={isOpen} onClose={handleClose}>
       <DrawerContent
-        className={` ${
-          steps === 2 ? "h-[85dvh]" : steps === 4 ? "h-[90dvh]" : "h-[80dvh]"
-        } sm:hidden flex flex-col   linear-gradient-onboarding `}
+        className={` ${steps===3?"h-[75dvh]":"min-h-[90dvh]"} sm:hidden flex flex-col   linear-gradient-onboarding `}
       >
         <X
           onClick={setClose}
-          className="rounded-full fixed -top-10 bg-white left-1/2 transform  -translate-x-1/2 text-gray-700 shadow-md p-1 border"
+          size={40}
+          className="rounded-full fixed -top-14 bg-black/50 left-1/2 transform  -translate-x-1/2 text-white shadow-md p-2 "
         />
-        <div className={`relative ${steps > 2 ? "h-full" : "h-[400px]"} `}>
+        <div className={`relative  ${steps > 2 ? "h-[90dvh]" : "h-[50dvh]"}`}>
           <div className="text-twilight-blue absolute top-10 p-4 z-10">
             <h1 className="  font-semibold text-2xl">
               {steps === 3
@@ -66,9 +68,7 @@ const OnboardModal = () => {
             alt="Image"
             width={100}
             height={100}
-            className={`w-full ${
-              steps > 2 ? "h-full" : "h-[400px]"
-            }  object-cover sm:object-fill`}
+            className={`w-full h-full object-cover`}
           />
 
           <Image
@@ -77,14 +77,14 @@ const OnboardModal = () => {
             width={80}
             height={80}
             className={`rounded-md absolute ${
-              steps > 2 ? "bottom-32" : "bottom-20"
+              steps > 2 ? "hidden" : "bottom-20"
             } slide-animation`}
           />
         </div>
         {steps === 4 ? (
           <>
             <div className="absolute top-0 backdrop-blur-sm h-full w-full" />
-            <div className="flex flex-col absolute overflow-y-auto h-[80dvh]  top-40 sidebar-scroll py-10 pb-20 z-20 justify-start items-center w-full gap-5">
+            <div className="flex flex-col absolute  top-28  py-10  z-20 justify-start items-center w-full gap-5">
               <div className="rounded-2xl text-twilight-blue flex flex-col gap-4 w-11/12 bg-white shadow-lg p-4 px-6 ">
                 <div className="flex items-center gap-4">
                   <PersonStanding
@@ -271,14 +271,14 @@ const OnboardModal = () => {
                     Automatic
                   </Button>
                 </div>
-                <div className="w-full flex gap-4 items-center">
-                  <p className="text-gray-600 flex-1">Pancard Number</p>
+                <div className="w-full flex gap-0.5 items-center">
+                  <p className="text-gray-600 w-1/2">Pancard Number</p>
                   <Input
                     value={pancardNumber}
                     onChange={(e) => {
                       setPancardNumber(e.target.value);
                     }}
-                    className="flex-1 bg-[#F5F8CC] line-clamp-6 rounded-2xl text-xl pl-7 py-7 border-2"
+                    className="w-1/2 bg-[#F5F8CC] line-clamp-6 rounded-2xl text-xl pl-7 py-7 border-2"
                   />
                 </div>
               </>
