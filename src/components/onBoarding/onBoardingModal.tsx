@@ -76,8 +76,8 @@ const OnboardModal = () => {
             alt="Image"
             width={80}
             height={80}
-            className={`rounded-md absolute ${
-              steps > 2 ? "hidden" : "bottom-20"
+            className={`rounded-md absolute  ${
+              steps > 2 ? "hidden" : "bottom-[8.5dvh]"
             } slide-animation`}
           />
         </div>
