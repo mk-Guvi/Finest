@@ -18,6 +18,7 @@ import Image from "next/image";
 import { Badge } from "../ui/badge";
 import { Input } from "../ui/input";
 import { useChangeListener } from "@/lib/utils";
+import InformationCard from "./onBoardingComponents";
 
 const OnboardModal = () => {
   const { isOpen, setClose } = useModal();
@@ -38,7 +39,9 @@ const OnboardModal = () => {
   return (
     <Drawer open={isOpen} onClose={handleClose}>
       <DrawerContent
-        className={` ${steps===3?"h-[75dvh]":"min-h-[90dvh]"} sm:hidden flex flex-col   linear-gradient-onboarding `}
+        className={` ${
+          steps === 3 ? "h-[75dvh]" : "min-h-[90dvh]"
+        } flex flex-col   linear-gradient-onboarding `}
       >
         <X
           onClick={setClose}
@@ -46,7 +49,7 @@ const OnboardModal = () => {
           className="rounded-full fixed -top-14 bg-black/50 left-1/2 transform  -translate-x-1/2 text-white shadow-md p-2 "
         />
         <div className={`relative  ${steps > 2 ? "h-[90dvh]" : "h-[50dvh]"}`}>
-          <div className="text-twilight-blue absolute top-10 p-4 z-10">
+          <div className="text-twilight-blue absolute top-7 p-4 z-10">
             <h1 className="  font-semibold text-2xl">
               {steps === 3
                 ? "Fetching your PAN Details"
@@ -77,83 +80,42 @@ const OnboardModal = () => {
             width={80}
             height={80}
             className={`rounded-md absolute  ${
-              steps===4?"hidden":steps === 3 ? "slide-animation-loading bottom-[13.5dvh]" : " slide-animation bottom-[8.5dvh]"
+              steps === 4
+                ? "hidden"
+                : steps === 3
+                ? "slide-animation-loading bottom-[13.5dvh]"
+                : " slide-animation bottom-[8.5dvh]"
             } `}
           />
         </div>
         {steps === 4 ? (
           <>
-            <div className="absolute top-0 backdrop-blur-sm h-full w-full" />
-            <div className="flex flex-col absolute  top-28  py-10  z-20 justify-start items-center w-full gap-5">
-              <div className="rounded-2xl text-twilight-blue flex flex-col gap-4 w-11/12 bg-white shadow-lg p-4 px-6 ">
-                <div className="flex items-center gap-4">
-                  <PersonStanding
-                    className="rounded-full p-2  bg-twilight-blue text-[#D7EFA3]"
-                    size={52}
-                  />
-                  <div className="flex flex-col gap-0.5">
-                    <p className="font-semibold">{pancardNumber}</p>
-                    <p className="font-normal text-xs">ASHAR RAI MUJEEB</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-6">
-                  <div className="flex flex-col gap-0.5">
-                    <p>Fetched Via</p>
-                    <p className="font-semibold">NSDL</p>
-                  </div>
-                  <div className="flex flex-col gap-0.5">
-                    <p>Last Updated</p>
-                    <p className="font-semibold">24/04/2024</p>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-2xl text-twilight-blue flex flex-col gap-4 w-11/12 bg-white shadow-lg p-4 px-6 ">
-                <div className="flex items-center gap-4">
-                  <Fingerprint
-                    className="rounded-full p-2  bg-twilight-blue text-[#D7EFA3]"
-                    size={52}
-                  />
-                  <div className="flex flex-col gap-0.5">
-                    <p className="font-semibold">{"Aadhaar"}</p>
+            <div className="container-plans-backdrop"></div>
 
-                    <p className="font-normal text-xs">UID</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-6">
-                  <div className="flex flex-col gap-0.5">
-                    <p>Fetched Via</p>
-                    <p className="font-semibold">Digio</p>
-                  </div>
-                  <div className="flex flex-col gap-0.5">
-                    <p>Date of Birth</p>
-                    <p className="font-semibold">18/10/1994</p>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-2xl text-twilight-blue flex flex-col gap-4 w-11/12 bg-white shadow-lg p-4 px-6 ">
-                <div className="flex items-center gap-4">
-                  <Home
-                    className="rounded-full p-2  bg-twilight-blue text-[#D7EFA3]"
-                    size={52}
-                  />
-                  <div className="flex flex-col gap-0.5">
-                    <p className="font-semibold">{"Address"}</p>
-                    <p className="font-normal text-xs">
-                      16/2,8 Jat Regiment, c/o 56 Apo
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-6">
-                  <div className="flex flex-col gap-0.5">
-                    <p>Fetched Via</p>
-                    <p className="font-semibold">Digio</p>
-                  </div>
-                  <div className="flex flex-col gap-0.5">
-                    <p>Address Type</p>
-                    <p className="font-semibold">Corresspondence</p>
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-col overflow-y-auto h-[75dvh]  sidebar-scroll container-plans    py-10   z-20 justify-start items-center w-full gap-5">
+              <InformationCard
+                icon={<PersonStanding size={52} />}
+                title={pancardNumber}
+                subtitle="ASHAR RAI MUJEEB"
+                fetchedVia="NSDL"
+                lastUpdated="24/04/2024"
+              />
+
+              <InformationCard
+                icon={<Fingerprint size={52} />}
+                title="Aadhaar"
+                subtitle="UID"
+                fetchedVia="Digio"
+                lastUpdated="18/10/1994"
+              />
+
+              <InformationCard
+                icon={<Home size={52} />}
+                title="Address"
+                subtitle="16/2,8 Jat Regiment, c/o 56 Apo"
+                fetchedVia="Digio"
+                lastUpdated="Corresspondence"
+              />
             </div>
           </>
         ) : null}

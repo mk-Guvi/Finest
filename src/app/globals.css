@@ -8,7 +8,6 @@ body {
   width: 100dvw;
 }
 
-/* Got From Next-themes - https://ui.shadcn.com/themes */
 @layer base {
   :root {
     --background: 224 79% 98% / 1;
@@ -307,7 +306,7 @@ body {
     animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   100% {
-    transform: translateX(700%); /* Moves the car out */
+    transform: translateX(510%); /* Moves the car out */
     animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 }
@@ -315,3 +314,45 @@ body {
 .slide-animation-loading {
   animation: carAnimation 8s ease-in-out infinite;
 }
+
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.container-plans {
+  position: absolute;
+  bottom: 200vh;
+  top: 18dvh;
+  transition: top 1s; 
+  animation: slideInFromBottom 2s forwards; 
+}
+
+.container-plans-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(0);
+  animation: blurTransition 2s ease-in-out forwards; 
+  z-index: 2;
+}
+
+@keyframes blurTransition {
+  from {
+    backdrop-filter: blur(0); 
+  }
+  to {
+    backdrop-filter: blur(4px);
+  }
+}
+
+
+
