@@ -18,7 +18,7 @@ export function PlanSectionDesktopView() {
     
     <Carousel className="w-full md:block hidden border bg-white rounded-2xl relative  drop-shadow-md">
       <CarouselContent>
-        <CarouselItem className="md:basis-1/2 pt-9 pl-9 lg:basis-1/4 xl:basis-1/6 2xl:basis-1/12">
+        <CarouselItem className="md:basis-1/2 pt-9 pl-9 lg:basis-1/4 ">
           <div className="flex flex-col justify-between  h-32 gap-1">
             <p className="font-semibold text-sm">{carouselTitle}</p>
             <p className="text-gray-500 text-sm">{carouselSubTitle}</p>
@@ -35,7 +35,7 @@ export function PlanSectionDesktopView() {
           return (
 
             <CarouselItem
-              className="md:basis-1/4 lg:basis-1/6 flex  justify-center items-center "
+              className="md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/12 flex  justify-center items-center "
               key={i}
               
             >
